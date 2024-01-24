@@ -1,55 +1,45 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Edición videos</title>
+	<meta charset="UTF-8">
+	<title>Video Slider usando CSS y JavaScript</title>
 <link href="css/style3.css" rel="stylesheet" type="text/css">
-	
-	
 </head>
-
 <body>
 	
-
-<div class="container  mt-5 mb-5">
-<div class="grid-row reverse row video-gallery">
+	<section >
+		
+		
+		<video id="slider" autoplay loop> 
+			<source src="videos/nave0000-0243.mp4" type="video/mp4">		
  
-  <input type="radio" value="1" name="video-list" id="video-1" checked="checked" /><label for="video-1">Escena de nave llegando a planeta.</label>
-  <input type="radio" value="2" name="video-list" id="video-2" /><label for="video-2">Video instructivo.</label>
-  <input type="radio" value="3" name="video-list" id="video-3" /><label for="video-3">Video para Asociación Civil Avanzar.</label>
-  <input type="radio" value="4" name="video-list" id="video-4" /><label for="video-4">Trabajo de curso.</label>
-  <input type="radio" value="5" name="video-list" id="video-5" /><label for="video-5">Video para 15 años.</label>
- 
+					
 
+		
+		</video>
+	
+	<ul class="navegacion">
+		<h1>Edición de videos</h1>
+		<h5>Puede ver los videos completos en mi Instagram <a href="https://www.instagram.com/pablo.cardenas.33234/" target="_blank">aquí.</a></h5>
+		<li onclick="cargarVideo('videos/nave0000-0243.mp4');">
+			<img src="videos/newworld.jpg">
+		</li>
+		<li onclick="cargarVideo('videos/Video.mp4');">
+		  <img src="videos/Video_10987.png">
+		</li>
+		<li onclick="cargarVideo('videos/avanzar_4.mp4');">
+		  <img src="videos/avanzar_4.png">
+		</li>
+	  <li onclick="cargarVideo('videos/0000-0328.mkv');" >
+			<img src="videos/remera-logo.jpg">
+		</li>
+	</ul>
 
-
-  <!-- videos -->
-  <div class="video video-1">
-      <iframe width="560" height="360" src="videos/nave0000-0243.mp4" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
- </div>
-
-   
- 
-  <div class="video video-2">
-      <iframe width="560" height="360" src="videos/videofinal2.mp4" frameborder="0" allow="accelerometer;  encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  </div>
-  <div class="video video-3">
-      <iframe width="560" height="360" src="videos/avanzar_4.mp4" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
-    </div>
- 
-  <div class="video video-4">
-      <iframe width="560" height="360" src="https://youtu.be/13u2utZI_4Q" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
- 
-  <div class="video video-5">
-      <iframe width="560" height="360" src="https://youtu.be/QapPrHPrBPM" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
- 
-  
-  
-  <!-- videos -->
- </div>
- </div>
+	</section>
 </body>
+<script type="text/javascript">
+	function cargarVideo(url){
+		document.getElementById('slider').src=url;
+	}	
+</script>
 </html>
